@@ -7,13 +7,16 @@ The available transformations are part of the models defined in this library.
 This package also renders tilespecs.
 
 ## Installation
-### (Optional)Install OpenCV
-1. Download the source codes of [OpenCV](https://opencv.org/releases/).
-2. Follow the [tutorial](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html).
-Notice the optional **step 6** when building OpenCV from source using Cmake.
+### Install OpenCV3(Check your PKG_CONFIG_PATH if you have installed before)
 ```
-Add this flag when running CMake: -DOPENCV_GENERATE_PKGCONFIG=ON
+$ conda create -n YOUR_ENV python=3.7
+$ conda install opencv=3.4
+$ export PKG_CONFIG_PATH=/path/to/conda envs/YOUR_ENV/lib/pkgconfig/
 ```
+**Tips:**
+   - **DON'T** use OpenCV2.x because of python3.
+   - **DON'T** use OpenCV4.x because there are some significant changes that could lead to conflicts.
+   - A later version will support OpenCV4.
 ### Install tinyr
 Refer to the repo [tinyr](https://github.com/HoraceKem/tinyr).
 ### Install this repo
